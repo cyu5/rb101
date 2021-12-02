@@ -47,8 +47,8 @@ input - validation, convertion, and cleaning:
     str to int 
     validate pos Integer
   apr
-    str to Integer
-    validate percentage(0..100)
+    str to Float
+    validate percentage
 
 edge cases:
   amount
