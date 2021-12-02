@@ -17,6 +17,8 @@ Sub-programs:
   1. formula for monthly payment, given amount, interest rate, and duration
   2. convert APR to monthly rate, 
   3. convert duration to monthly duration
+  4. input validation
+
 
 problem domain - finance:
   1. APR to monthly -> APR / 12 = monthly
@@ -40,7 +42,7 @@ program:
 
 input - validation, convertion, and cleaning:
   amount
-    str to int or float 
+    str to float 
     validate positive real number
     if float, cut off everything after first two decimals
   duration
@@ -69,12 +71,18 @@ edge cases:
     leading zeros 
     0 or large number
 
+rules/requirements/notes:
+  if user inputs more than to decimal points for amount, ignore every after that
+  how to handle float point precision for payment, interest rate, and so on? how much to keep?
+  need to format monthly rate to show at most 3 significant digits 
+
 
 bonus features:
   typing
   allow for years and months to be enter for duration
   improve input validation to be more robost
   add configuration file for program messages
+  color code the output
 
 
 Packaging work
