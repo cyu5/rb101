@@ -1,6 +1,6 @@
 :welcome: "------------Welcome------------"
-:result: "------------Results------------"
-:start_over: "Start over?"
+:results: "------------Results------------"
+:start_over: "Start over?(y/n or yes/no): "
 :goodbye: "Good bye!"
 :enter_amount: "Enter the loan amount: "
 :enter_months: "Enter the loan term(in months): "
