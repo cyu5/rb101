@@ -3,7 +3,7 @@
 :start_over: "Start over?(y/n or yes/no): "
 :goodbye: "Good bye!"
 :enter_amount: "Enter the loan amount: "
-:enter_months: "Enter the loan term(in months): "
+:enter_months: "Enter the loan term (in months): "
 :enter_apr: "Enter the APR: "
 :invalid_amount: "Invalid input! Please enter a positive loan amount."
 :invalid_months: "Invalid input! Please enter a positive integer loan term(in months)."

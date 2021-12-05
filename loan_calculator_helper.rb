@@ -22,26 +22,19 @@ end
 
 # @param {String} prompt
 # @return {String}
-def asks(prompt = "")
+def asks(prompt="")
 	print prompt
 	gets.chomp
-end
-
-# @param {Object} obj
-# @param {String} prompt
-def shows(obj, prompt = "")
-	print prompt
-	puts obj
 end
 
 # @param {String} prompt
 # @param {Symbol} processor
 # @param {String} retry_msg
 # @return {not nil} 
-def insists(prompt, processor, retry_msg)
+def insists(prompt, parser, retry_msg)
 	loop do
 		raw_input = asks prompt
-		result = method(processor).call(raw_input)
+		result = send(parser, raw_input)
 		break result unless result == nil
 		puts retry_msg
 	end
@@ -67,6 +60,18 @@ end
 def to_apr(input_str)
 	percent = input_str.to_f
 	percent.positive? ? percent : nil
+end
+
+# @param {Float} float
+# @return {String}
+def dollar_format(float)
+	"$#{format('%.2f', float)}"
+end
+
+# @param {Float} percent
+# @return {String}
+def percentage_format(percent)
+	"#{format('%.2g', percent)}%"
 end
 
 # @return {Boolean}
